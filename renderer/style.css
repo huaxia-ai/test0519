@@ -18,9 +18,9 @@ body {
 #app {
   width: 340px;
   height: 440px;
-  background: #ffffff;
+  background: #1a1a1a;
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@ body {
 #title {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: #ccc;
 }
 
 #titlebar-btns {
@@ -58,7 +58,7 @@ body {
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
-  color: #666;
+  color: #999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,7 +66,7 @@ body {
 }
 
 #titlebar-btns button:hover {
-  background: #f0f0f0;
+  background: #333;
 }
 
 #btn-close:hover {
@@ -75,8 +75,8 @@ body {
 }
 
 #btn-pin.active {
-  background: #e0e0e0;
-  color: #333;
+  background: #444;
+  color: #fff;
 }
 
 /* 环形进度条 */
@@ -94,6 +94,7 @@ body {
 
 #progress-bg {
   transition: stroke 0.4s;
+  stroke: #333;
 }
 
 #progress-bar {
@@ -111,14 +112,14 @@ body {
 #time {
   font-size: 42px;
   font-weight: 700;
-  color: #333;
+  color: #eee;
   letter-spacing: 2px;
   font-variant-numeric: tabular-nums;
 }
 
 #phase-label {
   font-size: 14px;
-  color: #888;
+  color: #aaa;
   margin-top: 4px;
 }
 
@@ -158,18 +159,18 @@ body {
 }
 
 .btn-secondary {
-  background: #f0f0f0;
-  color: #555;
+  background: #333;
+  color: #ccc;
 }
 
 .btn-secondary:hover {
-  background: #e0e0e0;
+  background: #444;
 }
 
 /* 统计 */
 #stats {
   font-size: 13px;
-  color: #888;
+  color: #aaa;
 }
 
 #count {

@@ -35,7 +35,7 @@ let isPinned = true;
 progressBar.style.strokeDasharray = CIRCUMFERENCE;
 progressBar.style.strokeDashoffset = '0';
 progressBar.style.stroke = PHASES[currentPhase].color;
-progressBg.style.stroke = getComputedStyle(document.documentElement).getPropertyValue('--progress-bg') || '#e0e0e0';
+progressBg.style.stroke = '#333';
 
 function formatTime(seconds) {
   const m = Math.floor(seconds / 60);
