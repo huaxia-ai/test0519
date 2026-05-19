@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+#app {
+  width: 340px;
+  height: 440px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 24px 24px;
+  -webkit-app-region: no-drag;
+}
+
+/* 标题栏 */
+#titlebar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0 8px;
+  -webkit-app-region: drag;
+}
+
+#title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+#titlebar-btns {
+  display: flex;
+  gap: 6px;
+  -webkit-app-region: no-drag;
+}
+
+#titlebar-btns button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+#titlebar-btns button:hover {
+  background: #f0f0f0;
+}
+
+#btn-close:hover {
+  background: #e74c3c !important;
+  color: #fff !important;
+}
+
+#btn-pin.active {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* 环形进度条 */
+#progress-container {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin: 4px 0 16px;
+}
+
+#progress-ring {
+  width: 100%;
+  height: 100%;
+}
+
+#progress-bg {
+  transition: stroke 0.4s;
+}
+
+#progress-bar {
+  transition: stroke-dashoffset 1s linear, stroke 0.4s;
+}
+
+#timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#time {
+  font-size: 42px;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+#phase-label {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* 控制按钮 */
+#controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#controls button {
+  width: 80px;
+  height: 38px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-primary {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #c0392b;
+}
+
+.btn-primary.paused {
+  background: #27ae60;
+}
+
+.btn-primary.paused:hover {
+  background: #219a52;
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #555;
+}
+
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+/* 统计 */
+#stats {
+  font-size: 13px;
+  color: #888;
+}
+
+#count {
+  font-weight: 700;
+  color: #e74c3c;
+  font-size: 15px;
+}

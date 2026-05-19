@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(taskkill //F //IM \"node.exe\")",
+      "Bash(rm -rf node_modules package-lock.json)",
+      "Bash(export ELECTRON_MIRROR=\"https://npmmirror.com/mirrors/electron/\")",
+      "Bash(npx electron-builder *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

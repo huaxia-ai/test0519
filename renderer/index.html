@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>番茄钟</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 标题栏（拖动区域） -->
+    <div id="titlebar">
+      <span id="title">🍅 番茄钟</span>
+      <div id="titlebar-btns">
+        <button id="btn-pin" title="窗口置顶">📌</button>
+        <button id="btn-close" title="关闭">✕</button>
+      </div>
+    </div>
+
+    <!-- 环形进度条 -->
+    <div id="progress-container">
+      <svg id="progress-ring" viewBox="0 0 200 200">
+        <circle id="progress-bg" cx="100" cy="100" r="90"
+          fill="none" stroke="#e0e0e0" stroke-width="8"/>
+        <circle id="progress-bar" cx="100" cy="100" r="90"
+          fill="none" stroke="#e74c3c" stroke-width="8"
+          stroke-linecap="round"
+          stroke-dasharray="565.49" stroke-dashoffset="0"
+          transform="rotate(-90 100 100)"/>
+      </svg>
+      <div id="timer-display">
+        <div id="time">25:00</div>
+        <div id="phase-label">专注</div>
+      </div>
+    </div>
+
+    <!-- 控制按钮 -->
+    <div id="controls">
+      <button id="btn-start" class="btn-primary">开始</button>
+      <button id="btn-reset" class="btn-secondary">重置</button>
+      <button id="btn-skip" class="btn-secondary">跳过</button>
+    </div>
+
+    <!-- 统计 -->
+    <div id="stats">
+      已完成：<span id="count">0</span> 个番茄
+    </div>
+  </div>
+
+  <script src="timer.js"></script>
+</body>
+</html>
